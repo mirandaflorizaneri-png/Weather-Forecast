@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Weather Pro</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="weatherBg" class="weather-bg" aria-hidden="true"></div>
+
+<header>
+    <h1>Weather Pro</h1>
+    <div class="search-box" role="search" aria-label="Search for city">
+        <input type="text" id="cityInput" placeholder="Enter city or country name" aria-label="City or country name input" autocomplete="on">
+        <button id="searchBtn" aria-label="Search">Search</button>
+    </div>
+    <p id="message" aria-live="polite" class="message">Loading default location…</p>
+</header>
+
+<div class="container">
+
+
+    <div class="weather-layout">
+
+        <div class="weather-card">
+            <div class="left">
+                <h2 id="cityName">---</h2>
+                <p id="date">---</p>
+                <h1 id="temperature">--°C</h1>
+                <p id="description">---</p>
+                <p id="humidity">Humidity: --%</p>
+            </div>
+
+            <div class="right">
+                <img id="weatherIcon" src="" alt="Weather Icon">
+            </div>
+        </div>
+
+        <div class="map" role="application" aria-label="Map showing location">
+            <iframe id="mapFrame" title="Location Map" loading="lazy" src="https://www.google.com/maps?q=37.7749,-122.4194&z=10&output=embed"></iframe>
+        </div>
+
+    </div>
+
+ 
+    <h3 class="section-title">5-Day Forecast</h3>
+    <div id="forecast" class="forecast"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
